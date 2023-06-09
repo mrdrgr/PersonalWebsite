@@ -1,0 +1,223 @@
+.navbar {
+    z-index: 100;
+    padding: 5px 25px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .wrapper {
+        margin: 1rem;
+        position: relative;
+
+        .toggle {
+            z-index: 1000;
+            margin-left: auto;
+            width: fit-content;
+            position: absolute;
+            top: 50px;
+            right: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            transition: 0.25s;
+    
+            .half {
+                width: 35px;
+                height: 5px;
+                background-color: $color-light;
+                cursor: pointer;
+                transition: 0.25s;
+            }
+        }
+    
+        .toggle:hover {
+            .half {
+                background-color: $color-primary;
+            }
+        }
+    
+        .toggle-click { 
+            .half {
+                background-color: $color-light !important;
+            }
+    
+            .half-top {
+                transform: translateY(5px) rotate(135deg);
+            }
+    
+            .half-bottom {
+                transform: translateY(-5px) rotate(-135deg);
+            }
+        }
+    
+        .nav {
+            padding: 50px;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top: 25px;
+            right: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: $color-primary;
+            color: $color-light;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: 0.25s;
+    
+            .list {
+                .item {
+                    margin-bottom: 25px;
+    
+                    .link {
+                        font-size: 2rem;
+                        font-weight: 700;
+                        transition: 0.25s;
+                    }
+    
+                    .link:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+    
+            .contact {
+                .title {
+                    margin-bottom: 10px;
+                    font-size: 2rem;
+                    font-weight: 900;
+                }
+    
+                .mail {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    transition: 0.25s;
+                }
+    
+                .mail:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    
+        .nav-visible {
+            opacity: 1;
+        }
+    }
+}
+
+.head {
+    margin-bottom: 35px;
+    color: rgba($color: $color-light, $alpha: 0.75);
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.heading {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -2.5px;
+
+    span {
+        color: $color-primary;
+        font-size: 110%;
+        font-weight: 900;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.footer {
+    padding: 10rem 2.5rem;
+
+    .intro {
+        margin-bottom: 10rem;
+
+        .title {
+            margin-bottom: 20px;
+            color: $color-primary;
+            font-size: 5rem;
+            font-weight: 900;
+            letter-spacing: -2.5px;
+            text-transform: uppercase;
+        }
+    }
+
+    .info {
+        .contact {
+            margin-bottom: 10px;
+            width: 80%;
+            display: block;
+
+            span {
+                color: rgba($color: $color-light, $alpha: 0.5);
+                font-size: 1rem;
+                text-transform: lowercase;
+            }
+        }
+
+        .list {
+            .item {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+.button-primary {
+    padding: 5px 10px;
+    position: relative;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.button-primary::after {
+    content: "";
+    width: 0px;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    background: rgba($color: $color-gray, $alpha: 0.1);
+    transition: 0.5s;
+}
+
+.button-primary:hover::after {
+    width: 100%;
+    background: linear-gradient(to right, rgba($color-primary, 0.5), rgba($color-primary, 0.5));
+}
+
+@media(max-width: 800px) {
+    .navbar {
+        padding: 0;
+
+        .wrapper {
+            margin: 0;
+
+            .nav {
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+}
