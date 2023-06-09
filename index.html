@@ -10,17 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
-    <title>Document</title>
+    <title>Mahdi Derogar</title>
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar navbar-deactive">
         <div class="wrapper">
             <div id="toggle" class="toggle">
                 <div class="half half-top"></div>
                 <div class="half half-bottom"></div>
             </div>
-            <div id="nav" class="nav hidden">
+            <div id="nav" class="nav nav-hidden">
                 <ul class="list">
                     <li class="item"><a class="link" href="#about">About</a></li>
                     <li class="item"><a class="link" href="#experience">Experience</a></li>
@@ -164,7 +164,7 @@
             </div>
             <div class="info">
                 <div class="row">
-                    <div class="col-50">
+                    <div class="col-100 col-50-large col-50-medium col-100-small">
                         <a class="contact button-primary" href="mailto:mrmahdidrgr@gmail.com">
                             Email
                             <br>
@@ -176,7 +176,7 @@
                             <span>+98 990 254 8011</span>
                         </a>
                     </div>
-                    <div class="col-50">
+                    <div class="col-100 col-50-large col-50-medium col-100-small">
                         <div class="row">
                             <div class="col-50">
                                 <ul class="list">
@@ -199,15 +199,7 @@
         </div>
     </footer>
     <script src="js/reveal.js"></script>
-    <script>
-        toggle = document.getElementById('toggle')
-        nav = document.getElementById('nav')
-
-        toggle.addEventListener('click', function (event) {
-            toggle.classList.toggle('toggle-click')
-            nav.classList.toggle('nav-visible')
-        })
-    </script>
+    <script src="js/navbar.js"></script>
 </body>
 
 </html>
