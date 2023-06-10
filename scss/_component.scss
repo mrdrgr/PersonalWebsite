@@ -136,6 +136,48 @@
     }
 }
 
+.desc {
+        position: relative;
+        font-size: 7.5rem;
+        line-height: 90%;
+        text-transform: uppercase;
+
+        span {
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 5px;
+            line-height: 1rem;
+            text-transform: uppercase;
+        }
+
+        &::before {
+            content: "";
+            width: 200vw;
+            height: 1px;
+            position: absolute;
+            top: 0;
+            left: calc(-100vw);
+            background-color: $color-gray;
+            opacity: 0.1;
+        }
+
+        &:last-child::after {
+            content: "";
+            width: 200vw;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: calc(-100vw);
+            background-color: $color-gray;
+            opacity: 0.1;
+        }
+}
+
+
+.typed-cursor {
+    display: none;
+}
+
 .reveal {
     opacity: 0;
     transform: translateY(50px);
@@ -158,7 +200,6 @@
             color: $color-primary;
             font-size: 5rem;
             font-weight: 900;
-            letter-spacing: -2.5px;
             text-transform: uppercase;
         }
     }
@@ -239,5 +280,9 @@
                 right: 0;
             }
         }
+    }
+
+    .desc {
+        font-size: 6rem;
     }
 }
