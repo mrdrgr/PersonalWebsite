@@ -252,7 +252,17 @@
     background: linear-gradient(to right, rgba($color-primary, 0.5), rgba($color-primary, 0.5));
 }
 
+@media(max-width: 1000px) {
+    .desc {
+        font-size: 6rem;
+    }
+}
+
 @media(max-width: 900px) {
+    .desc {
+        font-size: 5.5rem;
+    }
+
     .footer {
         .intro {
             margin-bottom: 5rem;
@@ -267,6 +277,11 @@
 }
 
 @media(max-width: 800px) {
+    .desc {
+        font-size: 4.5rem;
+        line-height: 100%;
+    }
+
     .navbar {
         padding: 0;
 
@@ -281,8 +296,10 @@
             }
         }
     }
+}
 
+@media(max-width: 600px) {
     .desc {
-        font-size: 6rem;
+        font-size: 4rem;
     }
 }
