@@ -145,29 +145,31 @@
         span {
             font-size: 1rem;
             font-weight: 900;
-            letter-spacing: 5px;
+            letter-spacing: 0.25rem;
             line-height: 1rem;
             text-transform: uppercase;
         }
 
         &::before {
             content: "";
-            width: 200vw;
+            width: 100vw;
             height: 1px;
             position: absolute;
             top: 0;
-            left: calc(-100vw);
+            left: 50%;
+            transform: translateX(-50%);
             background-color: $color-gray;
             opacity: 0.1;
         }
 
         &:last-child::after {
             content: "";
-            width: 200vw;
+            width: 100vw;
             height: 1px;
             position: absolute;
             bottom: 0;
-            left: calc(-100vw);
+            left: 50%;
+            transform: translateX(-50%);
             background-color: $color-gray;
             opacity: 0.1;
         }
@@ -252,15 +254,9 @@
     background: linear-gradient(to right, rgba($color-primary, 0.5), rgba($color-primary, 0.5));
 }
 
-@media(max-width: 1000px) {
-    .desc {
-        font-size: 6rem;
-    }
-}
-
 @media(max-width: 900px) {
     .desc {
-        font-size: 5.5rem;
+        font-size: 6rem;
     }
 
     .footer {
@@ -278,7 +274,7 @@
 
 @media(max-width: 800px) {
     .desc {
-        font-size: 4.5rem;
+        font-size: 5rem;
         line-height: 100%;
     }
 
@@ -301,5 +297,6 @@
 @media(max-width: 600px) {
     .desc {
         font-size: 4rem;
+        line-height: 125%;
     }
 }
